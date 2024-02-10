@@ -19,7 +19,13 @@ export default function RootLayout({
       <head>
         <title>Hotel Agency - ilman teguh prasetya</title>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <p className="flex justify-center items-center align-middle text-slate-400 text-xs lg:text-base px-4">
+          © 2024 Ilman Teguh Prasetya. Created with passion and dedication by
+          Ilman Teguh Prasetya.
+        </p>
+      </body>
     </html>
   );
 }

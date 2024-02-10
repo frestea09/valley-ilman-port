@@ -19,4 +19,8 @@ export const dataLandingPage = {
   ],
   buttonRegisterLabel: "Register",
   buttonLoginLabel: "Login",
+  secationWelcome: {
+    welcomeLabel: "",
+    descriptionLabel: ` Relax and unwind in our cozy accommodations, upgraded with the latest technology for your comfort!`,
+  },
 };

@@ -15,7 +15,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth focus:scroll-auto">
+      <head>
+        <title>Hotel Agency - ilman teguh prasetya</title>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );

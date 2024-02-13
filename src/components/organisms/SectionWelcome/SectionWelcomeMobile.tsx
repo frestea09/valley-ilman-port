@@ -13,7 +13,7 @@ export const SectionWelcomeMobile = () => {
         />
       </div>
       <div className="flex flex-col px-4 py-3 gap-7">
-        <h2 className=" font-bold line-clamp-2 leading-snug ">
+        <h2 className=" font-bold line-clamp-2 leading-snug text-2xl ">
           Enjoy Tech-Enhanced{" "}
           <span className="text-[#910A67]">Comfortable Stays</span>
         </h2>

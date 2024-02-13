@@ -4,7 +4,7 @@ import { NavbarMenuItem } from "./NabarMenuItem";
 
 export const Navbar = () => {
   return (
-    <div className="hidden lg:flex sticky top-0 left-0 bg-white h-20 shadow-md  items-center justify-between px-6">
+    <div className="hidden lg:flex sticky top-0 left-0 bg-white h-20 shadow-md  items-center justify-between px-6 z-50">
       <div className="container mx-auto">
         <nav className=" flex justify-between items-center py-4 px-7">
           <Link

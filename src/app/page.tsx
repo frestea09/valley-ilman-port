@@ -1,3 +1,4 @@
+"use client";
 import Navbar from "@/components/organisms";
 import { DiscoverySection } from "@/components/organisms/DiscoverySection/DiscoverySection";
 import { DiscoverySectionMobile } from "@/components/organisms/DiscoverySection/DiscoverySectionMobile";
@@ -6,16 +7,55 @@ import { InputFormCheckInMobile } from "@/components/organisms/InputFormCheckIn/
 import { NavbarMobile } from "@/components/organisms/NavbarMobile/NavbarMobile";
 import { SectionWelcome } from "@/components/organisms/SectionWelcome/SectionWelcome";
 import { SectionWelcomeMobile } from "@/components/organisms/SectionWelcome/SectionWelcomeMobile";
-import Image from "next/image";
-import { IoLocationOutline } from "react-icons/io5";
-import { IoCalendarOutline } from "react-icons/io5";
-import { IoSearchOutline } from "react-icons/io5";
-import { MdOutlineTouchApp } from "react-icons/md";
-import { IoTabletLandscapeOutline } from "react-icons/io5";
-import { AiOutlineSafety } from "react-icons/ai";
-import { Ri24HoursLine } from "react-icons/ri";
+import { GuarantedSection } from "@/components/organisms/GuarantedSection/GuarantedSection";
+import { GuarantedSectionDesktop } from "@/components/organisms/GuarantedSection/GuarantedSectionDesktop";
+import { StoreisSectionMobile } from "@/components/organisms/StoriesSection/StoriesSectionMobile";
+import { StoriesSection } from "@/components/organisms/StoriesSection/StoriesSection";
+import { FaArrowDown } from "react-icons/fa";
+import { useState } from "react";
+import { FaArrowUp } from "react-icons/fa";
+import { Accordion } from "@/components/molecules/Accordion/Accordion";
+import { AccordionQuestion } from "@/components/organisms/AccrodionQuestion/AccordionQuestion";
+import { AccordionQuestionDesktop } from "@/components/organisms/AccrodionQuestion/AccordionQuestionDesktop";
+import { AboutUsSectionMobile } from "@/components/organisms/AboutUsSection/AboutUsSectionMobile";
+import { AboutUsSection } from "@/components/organisms/AboutUsSection/AboutUsSection";
+import { IoChatboxEllipsesOutline } from "react-icons/io5";
+import { MdOutlineEmail } from "react-icons/md";
 
 export default function Home() {
+  const listOfQuestion = [
+    {
+      id: 1,
+      title: " When are the check-in and check-out times at Hotel?",
+      description: `You can check-in at 14:00 and check-out at 12:00, with the option to
+      request an early check-in starting from 12:00 at no extra charge,
+      depending on room availability, or opt for a late check-in, as our
+      hosts at Hotel are available 24/7.`,
+    },
+    {
+      id: 2,
+      title: "What is the capacity of the pods at Pod?",
+      description: `The double pod can accommodate 2 adults and 1 child under 10 years old, whereas the single pod is suitable for only 1 adult. To ensure a comfortable stay, kindly adhere to the specified capacity details. Additionally, guests traveling with children under 10 years old booking a double pod are not required to provide proof of swab/vaccination.`,
+    },
+    {
+      id: 3,
+      title:
+        " How are the terms and conditions of staying at Hotel during the pandemic?",
+      description: `In line with government directives and efforts to curb the spread of the virus, guests must present either their vaccination certificate indicating at least the first dose or evidence of a negative swab test taken no more than two days prior to their stay. This policy remains in effect until further notice.`,
+    },
+    {
+      id: 4,
+      title: "Can reservations be rescheduled or refunded?",
+      description: `As per our Standard Operating Procedure (SOP), confirmed reservations are non-reschedulable and non-refundable. For inquiries or further assistance regarding your reservation, please reach out to our Customer Service (CS) via WhatsApp at the following number: 0821-1900-7791.`,
+    },
+    {
+      id: 5,
+      title: "Is it necessary to show our IDs during check-in at Hotel?",
+      description: `ID Card Validation is a necessary procedure in all hotels aimed at ensuring appropriate measures in the event of unforeseen incidents.
+
+      At Hotel, guests must validate their ID Card via the Hotel application using their ID (KTP), Driver’s License (SIM), or passport to confirm that they are at least 18 years old. This requirement applies only to the guest who made the reservation. Guests under 18 years old should reserve the hotel with someone older.`,
+    },
+  ];
   return (
     <div className="overscroll-none ">
       <Navbar />
@@ -25,138 +65,48 @@ export default function Home() {
       <InputFormCheckInMobile />
       <InputFormCheckIn />
       <DiscoverySectionMobile />
-
       <div className="hidden lg:flex h-[300px] w-full"></div>
       <DiscoverySection />
-      <div className="flex lg:hidden flex-col gap-7 px-5 py-5">
-        <div>
-          <h3 className="text-xl font-semibold">
-            <span className="text-[#910A67]">Your Happiness</span> Guaranteed
-          </h3>
-        </div>
-        <div className="flex flex-col gap-7">
-          <div className="flex flex-row gap-3">
-            <MdOutlineTouchApp className="w-1/2" color="#910A67" size={70} />
-            <div className="flex flex-col gap-3">
-              <h3 className="font-semibold text-slate-700">Seamless Process</h3>
-              <p className="text-sm text-xs">
-                Enjoy a hassle-free experience from booking to check-in, all in
-                one easy-to-use app.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-row gap-8 px-5">
-            <IoTabletLandscapeOutline
-              className="w-1/2"
-              color="#910A67"
-              size={70}
-            />
-            <div className="flex flex-col gap-3">
-              <h3 className="font-semibold text-slate-700">
-                IoT Digital Room Control
-              </h3>
-              <p className="text-sm text-xs">
-                Personalize your room using our high-tech features such as mood
-                lamps and QR door locks, accessible via our B-Pad and your
-                phone.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-row gap-3">
-            <AiOutlineSafety className="w-1/2" color="#910A67" size={70} />
-            <div className="flex flex-col gap-3">
-              <h3 className="font-semibold text-slate-700">
-                Safe & Clean Stay
-              </h3>
-              <p className="text-sm text-xs">
-                Your comfort and safety are our top priorities; expect
-                impeccable hygiene standards.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-row gap-3">
-            <Ri24HoursLine className="w-1/2" color="#910A67" size={70} />
-            <div className="flex flex-col gap-3">
-              <h3 className="font-semibold text-slate-700">
-                24-hour Host Support
-              </h3>
-              <p className="text-sm text-xs">
-                Our hosts are just a chat away through our app's DM feature.
-                Reach out anytime for assistance.
-              </p>
-            </div>
+      <GuarantedSection />
+      <GuarantedSectionDesktop />
+      <StoreisSectionMobile />
+      <StoriesSection />
+      <AccordionQuestion />
+      <AccordionQuestionDesktop />
+      <AboutUsSectionMobile />
+      <AboutUsSection />
+      <div className="px-6 py-28">
+        <div className="flex flex-col gap-3  justify-center align-middle items-center  h-[300px]">
+          <h3 className="text-xl">Home</h3>
+          <div className="flex flex-col items-center justify-start align-middle">
+            <p className="font-bold text-5xl uppercase text-[#910A67]">hotel</p>
+            <p className="text-sm text-slate-500">Get More, Pay Less!</p>
           </div>
         </div>
-      </div>
-      <div className="hidden lg:flex flex-col gap-7 px-5 justify-center items-center bg-[#faedf6] py-9">
-        <div className="flex flex-col  align-middle items-center gap-4 ">
-          <h3 className="text-3xl font-semibold">
-            <span className="text-[#910A67]">Your Happiness</span> Guaranteed
-          </h3>
-          <p className="text-slate-500">
-            <span className="text-[#910A67]">Learn</span> more about Hotel and
-            what matters most to us.
-          </p>
-        </div>
-        <div className="flex flex-row justify-between py-10 px-7 gap-5">
-          <div className="flex flex-col gap-3 bg-white rounded-md px-7 py-7">
-            <div className="flex justify-center w-full">
-              <MdOutlineTouchApp className="w-1/2" color="#910A67" size={70} />
-            </div>
-
-            <div className="flex flex-col gap-3">
-              <h3 className="font-semibold text-slate-700">Seamless Process</h3>
-              <p className="text-sm text-xs">
-                Enjoy a hassle-free experience from booking to check-in, all in
-                one easy-to-use app.
-              </p>
-            </div>
+        <div className="flex flex-col justify-center items-center align-middle">
+          <div>
+            <h3 className="text-sm font-semibold">
+              Consumer Complaint Service
+            </h3>
           </div>
-          <div className="flex flex-col gap-3 bg-white rounded-md px-7 py-5">
-            <div className="flex justify-center w-full">
-              <IoTabletLandscapeOutline
-                className="w-1/2"
+          <div>
+            <div className="flex flex-row px-5 py-4 gap-7 items-center align-middle">
+              <IoChatboxEllipsesOutline
+                className="shadow-sm"
+                size={40}
                 color="#910A67"
-                size={70}
               />
+              <div className="flex flex-col text-xs">
+                <p>Whatsapp</p>
+                <p>+61123123</p>
+              </div>
             </div>
-
-            <div className="flex flex-col gap-3">
-              <h3 className="font-semibold text-slate-700">
-                IoT Digital Room Control
-              </h3>
-              <p className="text-sm text-xs">
-                Personalize your room using our high-tech features such as mood
-                lamps and QR door locks.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col gap-3 bg-white rounded-md px-7 py-5">
-            <div className="flex justify-center w-full">
-              <AiOutlineSafety className="w-1/2" color="#910A67" size={70} />
-            </div>
-            <div className="flex flex-col gap-3">
-              <h3 className="font-semibold text-slate-700">
-                Safe & Clean Stay
-              </h3>
-              <p className="text-sm text-xs">
-                Your comfort and safety are our top priorities; expect
-                impeccable hygiene standards.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col gap-3 bg-white rounded-md px-7 py-5">
-            <div className="flex justify-center w-full">
-              <Ri24HoursLine className="w-1/2" color="#910A67" size={70} />
-            </div>
-            <div className="flex flex-col gap-3">
-              <h3 className="font-semibold text-slate-700">
-                24-hour Host Support
-              </h3>
-              <p className="text-sm text-xs">
-                Our hosts are just a chat away through our app's DM feature.
-                Reach out anytime for assistance.
-              </p>
+            <div className="flex flex-row px-5 py-4 gap-7 items-center align-middle">
+              <MdOutlineEmail className="shadow-sm" size={40} color="#910A67" />
+              <div className="flex flex-col text-xs">
+                <p>Email</p>
+                <p>help@hotel.com</p>
+              </div>
             </div>
           </div>
         </div>

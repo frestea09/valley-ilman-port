@@ -26,7 +26,7 @@ export const AboutUsSectionMobile = () => {
             surroundings to your liking.
           </p>
           <p>
-            Don't forget your camera! Pod boasts Instagram-worthy spots to
+            Don &apos t forget your camera! Pod boasts Instagram-worthy spots to
             capture colorful memories throughout your stay. Ready to experience
             it for yourself? Pod awaits you in numerous cities across Indonesia.
             See you soon, Bob’s Besties!
@@ -47,7 +47,8 @@ export const AboutUsSectionMobile = () => {
             destinations across Indonesia.
           </p>
           <p className="font-semibold">
-            But wait, there's more! Explore further with Co-Living and Van!
+            But wait, there &apos s more! Explore further with Co-Living and
+            Van!
           </p>
           <p>
             Longing for an extended stay? Co-Living offers a co-living space
@@ -58,11 +59,11 @@ export const AboutUsSectionMobile = () => {
           </p>
           <p>
             For the adventurous souls, embark on a new journey with Van—a
-            state-of-the-art camper van, equipped with Hotel's signature
-            amenities. Complete with a tent atop the van and sleeping space for
-            four, Van lets you explore Indonesia's natural wonders in comfort.
-            With kitchen sets and more onboard, everything you need for an
-            unforgettable adventure awaits in our high-tech campervan.
+            state-of-the-art camper van, equipped with Hotel &apos s signature
+            amenities. Complete with a tent a top the van and sleeping space for
+            four, Van lets you explore Indonesia &apos s natural wonders in
+            comfort. With kitchen sets and more onboard, everything you need for
+            an unforgettable adventure awaits in our high-tech campervan.
           </p>
         </div>
       )}

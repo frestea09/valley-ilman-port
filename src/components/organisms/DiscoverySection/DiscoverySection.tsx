@@ -7,9 +7,10 @@ export const DiscoverySection = () => {
           for All Your Needs
         </h2>
         <p className="text-center">
-          Whether you're seeking a cozy urban retreat or yearning to explore
-          Indonesia's natural wonders, Bobobox promises to accompany you on your
-          adventure with unparalleled comfort, wherever you may be.
+          Whether you &apos re seeking a cozy urban retreat or yearning to
+          explore Indonesia &apos s natural wonders, Bobobox promises to
+          accompany you on your adventure with unparalleled comfort, wherever
+          you may be.
         </p>
       </div>
       <div className=" flex-row flex justify-start gap-6 pt-28">
@@ -24,11 +25,11 @@ export const DiscoverySection = () => {
         <div className="flex flex-col gap-4 py-4 w-1/2">
           <h3 className="font-semibold text-3xl">
             <span className="text-[#910A67]">Experience</span> the rejuvenating
-            power of nature's touch.
+            power of nature &apos s touch.
           </h3>
           <p className="font-light text-slate-400">
             Leave behind the busy city life and immerse yourself in the exotic
-            beauty of Indonesia's natural wonders at Bobocabin. Enjoy the
+            beauty of Indonesi a&apos s natural wonders at Bobocabin. Enjoy the
             stunning scenery from the comfort of your cozy cabin
           </p>
         </div>
@@ -40,10 +41,10 @@ export const DiscoverySection = () => {
             accessible.
           </h3>
           <p className="font-light text-slate-400">
-            As one of Indonesia's pioneering high-tech capsule hotels, Bobopod
-            offers an unparalleled sleeping experience. Discover ultimate
-            comfort and customize your pod to your preferences for a perfect
-            night's rest
+            As one of Indonesia &apos s pioneering high-tech capsule hotels,
+            Bobopod offers an unparalleled sleeping experience. Discover
+            ultimate comfort and customize your pod to your preferences for a
+            perfect night &apos s rest
           </p>
         </div>
         <div>

@@ -69,8 +69,8 @@ export const GuarantedSectionDesktop = () => {
               24-hour Host Support
             </h3>
             <p className="text-sm text-xs">
-              Our hosts are just a chat away through our app's DM feature. Reach
-              out anytime for assistance.
+              Our hosts are just a chat away through our app &apos s DM feature.
+              Reach out anytime for assistance.
             </p>
           </div>
         </div>

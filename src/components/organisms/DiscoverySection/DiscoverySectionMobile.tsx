@@ -20,10 +20,10 @@ export const DiscoverySectionMobile = () => {
             accessible.
           </h3>
           <p>
-            As one of Indonesia's pioneering high-tech capsule hotels, Bobopod
-            offers an unparalleled sleeping experience. Discover ultimate
-            comfort and customize your pod to your preferences for a perfect
-            night's rest
+            As one of Indonesia &apos s pioneering high-tech capsule hotels,
+            Bobopod offers an unparalleled sleeping experience. Discover
+            ultimate comfort and customize your pod to your preferences for a
+            perfect night &apos s rest
           </p>
         </div>
       </div>
@@ -37,11 +37,11 @@ export const DiscoverySectionMobile = () => {
         <div className="flex flex-col gap-4 py-4">
           <h3 className="font-semibold text-xl">
             <span className="text-[#910A67]">Experience</span> the rejuvenating
-            power of nature's touch.
+            power of nature &apos s touch.
           </h3>
           <p>
             Leave behind the busy city life and immerse yourself in the exotic
-            beauty of Indonesia's natural wonders at Bobocabin. Enjoy the
+            beauty of Indonesia &apos s natural wonders at Bobocabin. Enjoy the
             stunning scenery from the comfort of your cozy cabin
           </p>
         </div>

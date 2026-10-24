@@ -1,0 +1,6 @@
+version: 2
+updates:
+  - package-ecosystem: "npm" # ganti ke "npm" atau "composer" jika project web
+    directory: "/"
+    schedule:
+      interval: "daily" # dicek setiap hari

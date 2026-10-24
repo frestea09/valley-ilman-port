@@ -1,6 +1,8 @@
 version: 2
 updates:
-  - package-ecosystem: "npm" # ganti ke "npm" atau "composer" jika project web
+  # Menggunakan ekosistem "npm" karena membaca package.json
+  - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "daily" # dicek setiap hari
+      interval: "daily"
+    open-pull-requests-limit: 10

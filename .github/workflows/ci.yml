@@ -1,0 +1,36 @@
+name: Next.js CI
+
+# CI akan jalan otomatis saat ada push ke branch main atau ada Pull Request baru
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Ambil kode dari repositori
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Siapkan environment Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      # 3. Install seluruh pustaka secara bersih
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. Jalankan linter untuk cek kerapian kode
+      - name: Run ESLint
+        run: npm run lint
+
+      # 5. Uji apakah aplikasi bisa di-build untuk production
+      - name: Test production build
+        run: npm run build

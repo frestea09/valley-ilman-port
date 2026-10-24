@@ -20,12 +20,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: 'npm'
 
       # 3. Install seluruh pustaka secara bersih
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       # 4. Jalankan linter untuk cek kerapian kode
       - name: Run ESLint
